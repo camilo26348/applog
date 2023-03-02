@@ -44,7 +44,7 @@ if __name__ == '__main__':
                     "open_time": time - first_time_open_app
                 }
 
-                r = requests.post(url='http://10.176.1.234/pclog/api', data=data)
+                r = requests.post(url='http://10.176.1.234/pclog/api', data=data, timeout=2)
 
                 last_open_app = get_visible_app()
                 first_time_open_app = datetime.now()
